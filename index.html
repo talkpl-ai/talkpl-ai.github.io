@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>talkplay — Conversational Music Recommendation</title>
+    <meta name="description" content="talkplay research team — building the future of conversational music discovery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+</head>
+
+<body>
+    <header class="site-header" id="header-mount"></header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-left">
+                        <h1 class="front-title">We help people discover their <br>musical taste.</h1>
+                        <p class="lead" style="font-size: 1.2rem;">
+                            We believe that active music discovery will transform the music streaming industry. <br>W
+                            e are innovating passive music recommendation by leveraging large language models <br> to
+                            help
+                            people discover their musical tastes through conversation.
+                        </p>
+                    </div>
+                    <div class="hero-right">
+                        <div class="video-frame" style="border-radius: 20px; overflow: hidden;">
+                            <iframe id="demo-iframe" src="https://www.youtube.com/embed/nwPANTJrOvc?si=0Q3oW4zAkRTkrf6q"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="project-buttons"
+                            style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                            <button type="button" class="btn btn-sm"
+                                data-project="talkplay_tools">TalkPlay-Tools</button>
+                            <button type="button" class="btn btn-sm" data-project="talkplay">TalkPlay</button>
+                            <button type="button" class="btn btn-sm" data-project="lp-music-caps">LP-MusicCaps</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="projects-mount"></div>
+        <div id="team-mount"></div>
+
+    </main>
+
+    <footer class="site-footer" id="footer-mount"></footer>
+    <script>
+        const project_to_url = {
+            "talkplay_tools": "https://www.youtube.com/embed/nwPANTJrOvc?si=0Q3oW4zAkRTkrf6q",
+            "talkplay": "https://www.youtube.com/embed/nwPANTJrOvc?si=0Q3oW4zAkRTkrf6q",
+            "lp-music-caps": "https://www.youtube.com/embed/lSLyOKY8TQA?si=RgkpBvfxCzHhygk1",
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
