@@ -77,7 +77,7 @@
         const { scriptDirUrl } = resolvePaths();
         const mountEl = document.getElementById('projects-mount');
         if (!mountEl) return;
-        const html = await fetchComponent(new URL('projects/index.html', scriptDirUrl));
+        const html = await fetchComponent(new URL('components/projects.html', scriptDirUrl));
         const doc = new DOMParser().parseFromString(html, 'text/html');
         const header = doc.querySelector('header.site-header');
         if (header) header.remove();
@@ -91,7 +91,7 @@
         const { scriptDirUrl } = resolvePaths();
         const mountEl = document.getElementById('team-mount');
         if (!mountEl) return;
-        const html = await fetchComponent(new URL('team/index.html', scriptDirUrl));
+        const html = await fetchComponent(new URL('components/team.html', scriptDirUrl));
         const doc = new DOMParser().parseFromString(html, 'text/html');
         const header = doc.querySelector('header.site-header');
         if (header) header.remove();

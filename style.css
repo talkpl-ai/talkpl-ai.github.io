@@ -19,7 +19,7 @@ body {
     padding: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Quicksand", sans-serif;
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -155,7 +155,7 @@ a {
 
 /* Hero title custom font */
 .front-title {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
