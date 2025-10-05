@@ -1,0 +1,969 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-28 15:19:57",
+    "model_used": "gemini-2.5-flash",
+    "num_turns": 8,
+    "num_listener_tracks": 5,
+    "num_recommendation_pool": 23,
+    "token_usage_summary": {
+      "total_usage": {
+        "input_text_tokens": 124918,
+        "input_image_tokens": 79464,
+        "input_audio_tokens": 29876,
+        "output_tokens": 3682,
+        "prompt_details": null,
+        "response_details": null
+      },
+      "profiling_usage": {
+        "input_text_tokens": 1488,
+        "input_image_tokens": 1290,
+        "input_audio_tokens": 485,
+        "output_tokens": 37,
+        "prompt_details": null,
+        "response_details": null
+      },
+      "conversation_goal_usage": {
+        "input_text_tokens": 7205,
+        "input_image_tokens": 5934,
+        "input_audio_tokens": 2231,
+        "output_tokens": 299,
+        "prompt_details": null,
+        "response_details": null
+      },
+      "recsys_usage": {
+        "input_text_tokens": 79619,
+        "input_image_tokens": 53406,
+        "input_audio_tokens": 20079,
+        "output_tokens": 1829,
+        "prompt_details": null,
+        "response_details": null
+      },
+      "listener_usage": {
+        "input_text_tokens": 36606,
+        "input_image_tokens": 18834,
+        "input_audio_tokens": 7081,
+        "output_tokens": 1517,
+        "prompt_details": null,
+        "response_details": null
+      },
+      "total_cost": {
+        "input_text_cost": 0.0374754,
+        "input_image_cost": 0.0238392,
+        "input_audio_cost": 0.029876,
+        "output_cost": 0.009205,
+        "total_cost": 0.1003956
+      },
+      "profiling_cost": {
+        "input_text_cost": 0.00044639999999999995,
+        "input_image_cost": 0.000387,
+        "input_audio_cost": 0.000485,
+        "output_cost": 9.25e-05,
+        "total_cost": 0.0014108999999999999
+      },
+      "conversation_goal_cost": {
+        "input_text_cost": 0.0021615,
+        "input_image_cost": 0.0017802,
+        "input_audio_cost": 0.002231,
+        "output_cost": 0.0007475,
+        "total_cost": 0.0069202
+      },
+      "recsys_cost": {
+        "input_text_cost": 0.0238857,
+        "input_image_cost": 0.0160218,
+        "input_audio_cost": 0.020079,
+        "output_cost": 0.0045725,
+        "total_cost": 0.064559
+      },
+      "listener_cost": {
+        "input_text_cost": 0.0109818,
+        "input_image_cost": 0.0056502,
+        "input_audio_cost": 0.007081,
+        "output_cost": 0.0037925,
+        "total_cost": 0.027505500000000002
+      }
+    }
+  },
+  "conversation_goal": {
+    "category": "D",
+    "specificity": "LH",
+    "listener_goal": "find one specific R&B/Soul song that's perfect for a late-night drive, but they can't remember the name, only the feeling or some vague lyrical details.",
+    "listener_expertise": "neutral",
+    "target_turn_count": 8,
+    "queries": {
+      "initial": {
+        "example": [
+          "I'm looking for a smooth, chill R&B song that's perfect for driving around late at night, I can't quite place it.",
+          "Do you have any recommendations for a relaxed, soulful track that evokes a nighttime cruise?"
+        ]
+      },
+      "iteration": {
+        "example": [
+          "It has a really dreamy, almost atmospheric feel, and I think there's a female vocalist.",
+          "I vaguely remember the lyrics mentioning something about the sky or cruising on a highway, very laid-back."
+        ]
+      },
+      "achieved": {
+        "example": [
+          "YES! 'Night Drive' by Ari Lennox, that's the song! It perfectly captures that late-night cruising feeling.",
+          "That's it, 'Night Drive'! Can you build me a whole road trip playlist around this song's vibe?"
+        ]
+      }
+    }
+  },
+  "listener_profile": {
+    "age_group": "20s",
+    "country": "Mexico",
+    "gender": "female",
+    "preferred_musical_culture": "African American Music",
+    "preferred_language": "English",
+    "top_1_artist": "BJ The Chicago Kid",
+    "top_1_genre": "R&B/Soul",
+    "success": true,
+    "code": "200"
+  },
+  "session_context": {
+    "listener_tracks": [
+      {
+        "track_id": "5MjAFPcmrR1DYCgZrXCN4d",
+        "title": "Turnin' Me Up",
+        "artist": "BJ The Chicago Kid",
+        "album": "In My Mind, Turnin' Me Up",
+        "lyrics": "[Intro]\nPlay it from the top [?]\nLet me get the track just to make sure\nUh uh uh uh uh uh yeah uh uh",
+        "tags": [
+          "american",
+          "R&B/Soul",
+          "conan",
+          "2016 single"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-02-19",
+        "tempo": "78.32",
+        "key": "D major",
+        "chord": "Unknown",
+        "popularity": "56"
+      },
+      {
+        "track_id": "6PmnGYDsruYLBNY4Rpx4t9",
+        "title": "Church",
+        "artist": "Buddy, Chance the Rapper, BJ The Chicago Kid",
+        "album": "In My Mind, Church",
+        "lyrics": "I got too much power\nYou watch too much Power\nYou smoke too much sour, take a shower (take a shower)",
+        "tags": [
+          "Hip-Hop/Rap",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-02-19",
+        "tempo": "95.64",
+        "key": "E minor",
+        "chord": "E:min, G:maj, B:maj, E:maj, A:maj, D:maj, G:maj, F:maj, E:min, B:min, B:maj, E:min, A:min, G:maj, B:min, E:min, B:maj, B:min, E:min, C:maj, G:maj",
+        "popularity": "44"
+      },
+      {
+        "track_id": "1h2LHhmyAXi8tPNLi806JA",
+        "title": "Shadow Man (feat. Phoelix, Smino & Saba)",
+        "artist": "Saba, Phoelix, Noname, Smino",
+        "album": "Telefone",
+        "lyrics": "(Intro)\n\nZero\nSmoking on\n\n*coughs*\n\nLike where da hoe-di-hoe-di-hoes\nAll my life been getting by\nI h",
+        "tags": [
+          "Hip-Hop/Rap"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-08-12",
+        "tempo": "92.18",
+        "key": "C minor",
+        "chord": "D#:maj, C:min, F:min, G:maj, C:maj, D#:maj, A#:maj, D#:maj, G#:maj, G:maj, F:min, C:maj, D#:maj, F:min, A#:maj, D#:maj, C:min, F:min, G:maj, C:min, C:maj, D#:maj, F:min",
+        "popularity": "0"
+      },
+      {
+        "track_id": "6ss9pV5sKKYinhZAmIWhJe",
+        "title": "Gotta Know (feat. Jerry Paper)",
+        "artist": "Jerry Paper, Kari Faux",
+        "album": "Primary",
+        "lyrics": "[Fred Nice] Hook:\nI just see 100s\nI don't see no haters\nI need an umbrella\nBecause it's raining all ",
+        "tags": [
+          "Alternative Rap",
+          "Hip-Hop/Rap",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-09-15",
+        "tempo": "130.21",
+        "key": "E minor",
+        "chord": "C:min, E:min, D:maj, E:maj, F#:min, C:maj, B:maj, E:min, F#:min, B:maj, E:min, F#:min, C:min, E:min, F#:min, B:maj",
+        "popularity": "27"
+      },
+      {
+        "track_id": "3Zya4lXzYb2mW4FneXJX8e",
+        "title": "Intro (Inside My Mind)",
+        "artist": "BJ The Chicago Kid",
+        "album": "In My Mind",
+        "lyrics": "[Verse]\nI love God\nBut I also love mob movies\nI don't agree with everything I understand\nBut I under",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-02-19",
+        "tempo": "120.71",
+        "key": "B minor",
+        "chord": "Unknown",
+        "popularity": "16"
+      }
+    ],
+    "recommendation_pool_tracks": [
+      {
+        "track_id": "1lfHff4wdmV8VXrMaYKdoP",
+        "title": "Swang My Way",
+        "artist": "Black Party, bLAck pARty",
+        "album": "Mango",
+        "lyrics": "[Verse 1]\nAlways get a warm feeling when I'm with you\nLike I'm a kid again\nJust playing in the rain\n",
+        "tags": [
+          "Hip-Hop/Rap",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-10-14",
+        "tempo": "150.52",
+        "key": "G minor",
+        "chord": "A#:maj, G#:maj, A#:maj, G#:maj, F:min, A#:maj, F:min, D#:maj, G#:maj, A#:maj, D#:maj, G#:maj, A#:maj, G#:maj, C:min, A#:maj, F:min, A#:maj, G#:maj, A#:maj, G#:maj, A#:maj",
+        "popularity": "0"
+      },
+      {
+        "track_id": "79SwPJfANsJt3PRxlc6mQb",
+        "title": "Yes! - Instrumental",
+        "artist": "Slum Village",
+        "album": "Yes! (Instrumentals), Yes!",
+        "lyrics": "[Intro: Jay Dee]\nThrough the headphones\nYeah, Funk Master Flex, baby\nYeah, we gon' set it off\nYes, y",
+        "tags": [
+          "midwest rap",
+          "Hip-Hop/Rap",
+          "underground hip hop"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-12-06",
+        "tempo": "94.07",
+        "key": "C minor",
+        "chord": "Unknown",
+        "popularity": "0"
+      },
+      {
+        "track_id": "0Y0JVqSlj8J512B5kjKekP",
+        "title": "Back to Me",
+        "artist": "Moonchild",
+        "album": "Be Free",
+        "lyrics": "Seems I'm never by my phone whenever you call\nAlways busy or having my fun\nAnd when you want to take",
+        "tags": [
+          "Jazz",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2012-04-27",
+        "tempo": "94.19",
+        "key": "F# minor",
+        "chord": "B:maj, E:maj, B:maj, D:maj, C#:min, D:maj, B:maj, D:maj, D:maj, F#:min, B:maj, G#:maj, D#:maj, D:maj, E:min, B:maj, A#:maj",
+        "popularity": "41"
+      },
+      {
+        "track_id": "5LWKsMeXaYBoKzCHk8syQy",
+        "title": "Rockets (feat. Moe Moks)",
+        "artist": "LION BABE",
+        "album": "Rockets (feat. Moe Moks)",
+        "lyrics": "[Intro: Jillian Hervey & Moe Moks]\nWe lit, we lit\nWe lit, we lit yeah\n\n[Verse 1: Jillian Hervey]\nFly",
+        "tags": [
+          "R&B/Soul",
+          "played"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-02-07",
+        "tempo": "134.29",
+        "key": "G# minor",
+        "chord": "Unknown",
+        "popularity": "48"
+      },
+      {
+        "track_id": "2MJBTjDGNum1zpODeH3pum",
+        "title": "HelGa.",
+        "artist": "Phony Ppl",
+        "album": "Yesterday's Tomorrow",
+        "lyrics": "Elbee Thrie Verse 1:\n\nI Know What You're thinkinG, Im dreaminG The Same thinG Too...\nAnd helGa Patak",
+        "tags": [
+          "2015 single",
+          "Hip-Hop/Rap",
+          "played"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2015-01-13",
+        "tempo": "55.82",
+        "key": "A major",
+        "chord": "Unknown",
+        "popularity": "32"
+      },
+      {
+        "track_id": "6JvfBzqZmSiEG5MjM7OcSY",
+        "title": "Diddy Bop (feat. Cam O'bi & Raury)",
+        "artist": "Cam O'bi, Raury, Noname",
+        "album": "Telefone",
+        "lyrics": "[Intro: Noname]\nI'm ready, I'm ready, I'm ready, I'm ready\nI'm ready, I'm ready, I'm ready\nI'm ready",
+        "tags": [
+          "hip hop",
+          "conscious hip hop",
+          "jazz hip hop",
+          "Soundtracks"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-08-12",
+        "tempo": "79.77",
+        "key": "D# minor",
+        "chord": "A#:maj, D#:maj, C#:maj, F#:maj, D#:maj, C#:maj, B:maj, A#:maj, D#:maj, C#:maj, B:maj, F#:maj, D#:maj, C#:maj, B:maj, A#:maj, D#:maj, C#:maj, B:maj",
+        "popularity": "0"
+      },
+      {
+        "track_id": "19GxZZECG7HLXPCxIa99zD",
+        "title": "Nakamarra (Rox N Stix Desert Mix)",
+        "artist": "Hiatus Kaiyote",
+        "album": "Recalibrations, Vol. 1",
+        "lyrics": "[Verse 1]\nHannah my darling\nI will follow you into the sunrise under desert sky\nWe fly, rise togethe",
+        "tags": [],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-05-16",
+        "tempo": "86.93",
+        "key": "Ab major",
+        "chord": "C:maj, E:maj, G#:maj, C#:maj, A#:maj, C#:maj, D#:maj, G#:maj, D#:maj, A#:maj, C#:maj, G#:maj, C#:maj, D#:maj, C#:maj, A#:maj, C:maj, E:min, A:maj, G#:maj, G:maj, C#:maj, C:min",
+        "popularity": "29"
+      },
+      {
+        "track_id": "7jFbOudqQuRltEVWMguYWc",
+        "title": "Ignore",
+        "artist": "Abhi//Dijon",
+        "album": "Ignore",
+        "lyrics": "[Verse 1]\nI can't believe that you gon' up and leave\nI can't believe you gon' walk out on me\nSo next",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-09-20",
+        "tempo": "91.16",
+        "key": "C minor",
+        "chord": "Unknown",
+        "popularity": "34"
+      },
+      {
+        "track_id": "0oz3Beex42DL7nabhLknBd",
+        "title": "Nobody",
+        "artist": "Rapsody, Anderson .Paak, Black Thought, Moonchild",
+        "album": "Laila’s Wisdom",
+        "lyrics": "Lyrics from Snippet\n\nMoney out the window\nGo and pick it up (Go and pick it up)\nThey don't know is a",
+        "tags": [
+          "Hip-Hop/Rap",
+          "best of 2017",
+          "rapsody",
+          "anderson ＄paak",
+          "soulful",
+          "black thought",
+          "incredible",
+          "9th wonder",
+          "moonchild",
+          "classic"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-09-22",
+        "tempo": "86.17",
+        "key": "D major",
+        "chord": "D:maj, G:maj, B:min, G:maj, A:maj, G:maj, D:maj, A:maj, G:maj, D:maj, F#:min, G:maj, B:min, D:maj, F#:min, G:maj, B:min",
+        "popularity": "26"
+      },
+      {
+        "track_id": "65OzTXP2Atva3eOmfKpKOP",
+        "title": "Everything",
+        "artist": "Rayana Jay",
+        "album": "Morning After",
+        "lyrics": "[Verse 1]\nWe go back and forth, in and out\nWe good then we at it again\nI tell I love you, don’t want",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-09-15",
+        "tempo": "97.82",
+        "key": "E minor",
+        "chord": "G:maj, F:maj, E:maj, G:maj, E:min, D:maj, C:maj, B:min, A:min, D:maj, F:maj, D:maj, B:min, E:min, C:maj, E:min, D:maj, E:min, F:maj",
+        "popularity": "32"
+      },
+      {
+        "track_id": "3XRosKfSgFSDIb6YVpApIl",
+        "title": "Treat Me Like Fire",
+        "artist": "LION BABE",
+        "album": "Begin",
+        "lyrics": "[Chorus]\n(Treat me like) Treat me like\n(Treat me like) Treat me like\n(Fire) Fire\n(Fire) Fire\n(Into t",
+        "tags": [
+          "american",
+          "neo-soul",
+          "lion babe",
+          "downtempo",
+          "rnb",
+          "2015 single",
+          "sensual",
+          "fire and water",
+          "duo",
+          "female vocalists",
+          "alternative rnb",
+          "soul",
+          "r'n'b",
+          "bbc radio1 playlist 2015",
+          "contemporary rnb"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-01-22",
+        "tempo": "92.06",
+        "key": "D major",
+        "chord": "C#:maj, F#:maj, G:maj, C#:maj, B:min, F#:maj, C#:maj, F#:maj",
+        "popularity": "50"
+      },
+      {
+        "track_id": "1Mzf63ecHw1iZNS2Zhp6ac",
+        "title": "Man Down",
+        "artist": "PJ Morton, Buddy, Constantine, BJ The Chicago Kid",
+        "album": "In My Mind, Man Down",
+        "lyrics": "ฉันจะรู้ได้ไงว่าเธอนั้นคิดยังไง\nในเมืองที่กว้างใหญ่ใจเธออยู่ที่ใคร\nช่วยพูดออกมาสักทีว่าเธอนั้นคิดเช่",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-02-19",
+        "tempo": "101.24",
+        "key": "C# minor",
+        "chord": "C#:min, B:maj, C#:min, C#:min",
+        "popularity": "26"
+      },
+      {
+        "track_id": "2QmJfxcWEMuT1gDqmTdjEv",
+        "title": "Joy",
+        "artist": "Leven Kali",
+        "album": "Joy",
+        "lyrics": "[Based on Performance in COLORS BERLIN]\n\n[Verse 1:]\n(Uh)\nSo we want (JOY)\nMusic bizz bought me up\nTr",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-11-15",
+        "tempo": "89.21",
+        "key": "Bb minor",
+        "chord": "Unknown",
+        "popularity": "32"
+      },
+      {
+        "track_id": "1goN1TN8DZDLRNizMciiho",
+        "title": "Dent Jusay",
+        "artist": "Matt Martians",
+        "album": "The Drum Chord Theory",
+        "lyrics": "[Intro]\n(Syd & Steve Lacy vocalizing)\n\n[Hook]\nDent Jusay you wanna fly away someday?\nSo won't you ro",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-01-27",
+        "tempo": "147.83",
+        "key": "E major",
+        "chord": "A#:maj, A:maj, F:maj, B:maj, F:min, E:maj, F#:maj, E:maj, A#:maj, E:maj, F:min, A:min, G:maj, D#:maj, E:maj, F:min, G#:maj, C#:maj, E:maj, A#:min, A:min, A#:min, F:maj",
+        "popularity": "0"
+      },
+      {
+        "track_id": "2LdbF40p7euLqEsaxpt70i",
+        "title": "Bernal Heights",
+        "artist": "Duckwrth",
+        "album": "Bernal Heights",
+        "lyrics": "(Intro)\nShe was born in the grassy hillside of Bernal Heights\nWhere the grass was greener, with the ",
+        "tags": [
+          "2017 single",
+          "Hip-Hop/Rap"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-07-07",
+        "tempo": "87.09",
+        "key": "F major",
+        "chord": "Unknown",
+        "popularity": "38"
+      },
+      {
+        "track_id": "5Wbjjde5ez7sx22OtmrXKV",
+        "title": "Smile",
+        "artist": "Leven Kali",
+        "album": "Smile",
+        "lyrics": "[Introduction]\nOh, oh, yeah, yeah, uh\n\n[Verse 1]\nI feel fine (I feel fine)\nYou should try (You shoul",
+        "tags": [
+          "rnb",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-05-25",
+        "tempo": "105.24",
+        "key": "C major",
+        "chord": "Unknown",
+        "popularity": "47"
+      },
+      {
+        "track_id": "0Lgk4pD3Y0iE9w2xDilhjj",
+        "title": "Spread Too Thin (feat. Lindsay Olsen)",
+        "artist": "Joomanji",
+        "album": "Manj",
+        "lyrics": "[Verse 1]\nI don't want to see love cavin' in\nBecause your walls are drawn out too thinly\nI don't wan",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2013-02-01",
+        "tempo": "88.17",
+        "key": "D# minor",
+        "chord": "F#:maj, G#:maj, A#:maj, D#:min, F#:maj, G#:maj, F:min, D#:min, F#:maj, G#:maj, F:min, F:maj, D#:min, F#:maj, G#:min, F#:maj, D#:min, F#:maj, G#:min, F#:maj",
+        "popularity": "52"
+      },
+      {
+        "track_id": "3VeuvRWfJLSOzeVPrgi5MR",
+        "title": "Night Drive",
+        "artist": "Ari Lennox",
+        "album": "PHO",
+        "lyrics": "[Intro]\nAyyyyyy ooh\nAyyyyyy ooh\nAyyyyyy ooh\nYeah\n\n[Chorus]\nPurple in the sky\nCruising Highway 85\nTho",
+        "tags": [
+          "rnb",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-10-21",
+        "tempo": "129.98",
+        "key": "E major",
+        "chord": "Unknown",
+        "popularity": "53"
+      },
+      {
+        "track_id": "4Z9npQ93MrnIkRcTBKwSa3",
+        "title": "Looks",
+        "artist": "Steve Lacy",
+        "album": "Steve Lacy's Demo",
+        "lyrics": "[Hook]\nI want you and you want me\nBut we don't know each other enough\nTo tell\nLooks ain't enough\nLoo",
+        "tags": [
+          "alternative rock",
+          "Alternative",
+          "indie",
+          "neo soul",
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2017-02-24",
+        "tempo": "94.21",
+        "key": "D minor",
+        "chord": "A:maj, D:min, C#:maj, A#:maj, A:maj, G:maj, D:min, A#:maj, A:maj, C:maj, A:min, A#:maj, G:min, C:maj, A:min, A#:maj, G:maj, C#:min, A#:maj, A:maj, C:maj, C#:maj, A#:maj, A:min",
+        "popularity": "0"
+      },
+      {
+        "track_id": "37Z5gTlgMHD2iCorfOr0L9",
+        "title": "Where Are You? (Love for JL) [feat. Copasetic & Lindsay Olsen]",
+        "artist": "Joomanji",
+        "album": "Manj",
+        "lyrics": "[Intro]\nDooo (Skat)\n\n[Chorus]\nSaid I’m Calling and wondering and feeling and hoping too\nSaid I’m Cal",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2013-02-01",
+        "tempo": "71.55",
+        "key": "F# minor",
+        "chord": "Unknown",
+        "popularity": "49"
+      },
+      {
+        "track_id": "6j328qpqI6nScYgOTW5rBl",
+        "title": "Love Inside",
+        "artist": "Isabella, BJ The Chicago Kid",
+        "album": "Love Inside, In My Mind",
+        "lyrics": "[Intro: BJ The Chicago Kid]\nToo much love\nCan’t keep it to myself\nBaby girl, I think I need…\n\n[Choru",
+        "tags": [
+          "R&B/Soul"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-02-19",
+        "tempo": "71.75",
+        "key": "Db major",
+        "chord": "C#:maj, F#:maj, F:min, G#:maj, D#:min, G#:maj, F#:maj, F:min, D#:maj, D#:min, F#:maj, F:min, C#:maj, F#:maj, A#:min, F#:maj",
+        "popularity": "34"
+      },
+      {
+        "track_id": "4SnvGQ7wRoFpxPKXmwJJMr",
+        "title": "Good Good Love (feat. BJ The Chicago Kid)",
+        "artist": "Rapsody",
+        "album": "The Idea Of Beautiful",
+        "lyrics": "[Verse 1]\nBaby, I can't believe what you done to me\nI'm lying here, thinking unclear\nCause you done ",
+        "tags": [
+          "chill",
+          "Hip-Hop/Rap",
+          "bj the chicago kid",
+          "rapsody",
+          "hip-hop",
+          "soulful",
+          "9th wonder",
+          "2012"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2012-08-28",
+        "tempo": "75.47",
+        "key": "B major",
+        "chord": "F#:maj, E:maj, B:maj, E:maj, D#:maj, F#:maj, G:maj, F#:maj, B:maj, E:maj, F:min, E:min, B:maj, E:maj, C:maj, E:maj, F#:maj, D:maj, F#:maj, C:maj, E:maj",
+        "popularity": "35"
+      },
+      {
+        "track_id": "3DlgDXIYtnWtJKiB8bZQMv",
+        "title": "Photosynthesis",
+        "artist": "Jean Deaux, Saba",
+        "album": "Bucket List Project",
+        "lyrics": "[Intro: Jean Deaux]\nGot it, I got it, oh\nSay what you're looking for, 'cause I got it, yeah, ayy\nI g",
+        "tags": [
+          "hip hop",
+          "Hip-Hop/Rap"
+        ],
+        "album_art_path": null,
+        "duration": null,
+        "spotify_track_release_date": "2016-10-27",
+        "tempo": "110.81",
+        "key": "D minor",
+        "chord": "D:maj, A#:maj, C:maj, F:maj, D:maj, A:min, D:maj, D:min, G:min, C:maj, F:maj, D:maj, G:min, C:maj, F:maj, A:min, G:maj, A:maj, D:maj, A#:maj, A:min",
+        "popularity": "2"
+      }
+    ]
+  },
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "listener_turn": {
+        "turn_number": 1,
+        "prompt": "\n## Turn 1\nYou are starting a new music discovery conversation. Your task is to make an initial request.\n\n**CRITICAL INSTRUCTION**: Your `message` for this turn MUST be an exact, verbatim copy of ONE of the examples from the list below.\n\n### Conversation Goal\nfind one specific R&B/Soul song that's perfect for a late-night drive, but they can't remember the name, only the feeling or some vague lyrical details.\n\n### Initial Query Examples\n- \"I'm looking for a smooth, chill R&B song that's perfect for driving around late at night, I can't quite place it.\"\n- \"Do you have any recommendations for a relaxed, soulful track that evokes a nighttime cruise?\"\n\n### Response Format\nYour response MUST follow the provided YAML format. The `message` field must be one of the examples above.\nPlease use English language for thought and message.\n\n```yaml\nthought: My goal is to [Conversation Goal]. I will select one of the provided initial queries to start the conversation.\nmessage: [Copy one of the initial query examples here, exactly as it is written.]\n```\n",
+        "thought": "Unknown thought",
+        "goal_progress_assessment": null,
+        "message": "I'm looking for a smooth, chill R&B song that's perfect for driving around late at night, I can't quite place it.",
+        "success": false,
+        "code": "422"
+      },
+      "recsys_turn": {
+        "turn_number": 1,
+        "prompt": "\n## Turn 1\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): []\n**Listener's Latest Message**: \"I'm looking for a smooth, chill R&B song that's perfect for driving around late at night, I can't quite place it.\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener is looking for a smooth, chill R&B song perfect for a late-night drive. \"Night Drive\" by Ari Lennox is an ideal match as its title directly evokes the desired setting and its R&B genre ensures it fits the smooth, chill vibe.",
+        "track": {
+          "track_id": "3VeuvRWfJLSOzeVPrgi5MR",
+          "title": "Night Drive",
+          "artist": "Ari Lennox",
+          "album": "PHO",
+          "lyrics": "[Intro]\nAyyyyyy ooh\nAyyyyyy ooh\nAyyyyyy ooh\nYeah\n\n[Chorus]\nPurple in the sky\nCruising Highway 85\nThought I saw a shooting star\nBeaming in your haunting eyes\n\n[Verse 1]\nHerbie Hancock on my radio\nOoh let's pull over for the liquor store\nCop some Skittles and some Crown Royal\nI know we ended things a week ago\nBaby fall into me slow\n\n[Pre-Chorus]\nOoh don't keep your love from me\nNo no love on me\nOn that night drive\nOoh you're so fine\n[Chorus]\nPurple in the sky\nCruising highway 85\nThought I saw a shooting star\nBeaming in your haunting eyes\n\n[Verse 2]\nI said now baby we can disappear\nAWOL like we are some fugitives\nLiberation oh so cavalier\nOoh baby take me far away from here\nBaby you know I'm sincere\n\n[Pre-Chorus]\nOoh don't keep your love from me\nNo no love on me\nOn that night drive\nOoh you're so fine\n\n[Chorus]\nPurple in the sky\nCruising highway 85\nThought I saw a shooting star\nBeaming in your haunting eyes\n\n[Outro]\nOoh ayyyyayyyayyyayyy\nOoh ayyyyayyyayyyayyy",
+          "tags": [
+            "rnb",
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2016-10-21",
+          "tempo": "129.98",
+          "key": "E major",
+          "chord": "Unknown",
+          "popularity": "53",
+          "caption": "A female singer sings this cool melody with backup singers in vocal harmony. The song is medium tempo with a groovy bass line, steady drumming rhythm, keyboard accompaniment and other percussion hits. The vocalist is mellow and in mono."
+        },
+        "message": "Oh, I totally get that vibe! For a smooth, chill R&B track perfect for a late-night drive, I'd suggest \"Night Drive\" by Ari Lennox. It's got that dreamy, relaxed feel that's just right for cruising.",
+        "success": true,
+        "code": "200"
+      }
+    },
+    {
+      "turn_number": 2,
+      "listener_turn": {
+        "turn_number": 2,
+        "prompt": "name='files/f8icuv4mtqcg' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 622885, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 0, 497176, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 622885, tzinfo=TzInfo(UTC)) sha256_hash='MjRjN2QzYWIyYWNlYWM4NTNhMzBmNTFlMzc2ZTFmZmNiZDFjNDM5OTJhMGYyOTdmNjBjMTUwY2Q3YmJiNDhjNA==' uri='https://generativelanguage.googleapis.com/v1beta/files/f8icuv4mtqcg' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/ktkv273rouqv' display_name=None mime_type='image/jpeg' size_bytes=125206 create_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 286833, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 3, 244169, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 286833, tzinfo=TzInfo(UTC)) sha256_hash='ZjdjOWQzOWZlMWViZTUxMjMwMzE3Zjc4OTllY2NkMjgwYWMzMWY0N2EwODVhODYxN2JkMGFmZmEwOGQ0ZjQwMA==' uri='https://generativelanguage.googleapis.com/v1beta/files/ktkv273rouqv' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 2\n\nYou just listened to this recommended track:\n- Title: Night Drive\n- Artist: Ari Lennox\n- Album: PHO\n\nThe recommendation system said: \"Oh, I totally get that vibe! For a smooth, chill R&B track perfect for a late-night drive, I'd suggest \"Night Drive\" by Ari Lennox. It's got that dreamy, relaxed feel that's just right for cruising.\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance for Turn 2\nThis is your second turn, so consider your conversation strategy:\n- **If your goal has 1-3 target turn counts**: This recommendation should be close to your goal, be specific about what you want\n- **If your goal has 4-6 target turn counts**: This is early-mid conversation, provide clear feedback and moderate refinement\n- **If your goal has 6-8 target turn counts**: This is early conversation, be more exploratory and open to discovery\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Does this align with my specific goal? How should I adjust my strategy for the remaining turns?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your concise conversational response and next request. This should be generated based on your thought process and be aimed at steering the recommendations closer to your goal.]\n```\n",
+        "thought": "The RecSys suggested \"Night Drive\" by Ari Lennox. My goal is to find *one specific* R&B/Soul song that's perfect for a late-night drive, which I can't remember the name of, only the feeling or vague lyrical details. This song actually *is* the song I was looking for. This immediately achieves my primary goal. Now I need to confirm it and then transition to the secondary goal of asking for more recommendations based on that vibe.thought: The RecSys suggested \"Night Drive\" by Ari Lennox. This is actually the exact song I was looking for! It perfectly fits the description of a smooth, chill R&B track for a late-night drive, and the artist and title immediately clicked. My main goal is achieved. Now I need to confirm this and then transition to asking for more recommendations that match this vibe.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "YES! 'Night Drive' by Ari Lennox, that's the song! It perfectly captures that late-night cruising feeling. Can you build me a whole road trip playlist around this song's vibe?",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 2,
+        "prompt": "\n## Turn 2\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR']\n**Listener's Latest Message**: \"YES! 'Night Drive' by Ari Lennox, that's the song! It perfectly captures that late-night cruising feeling. Can you build me a whole road trip playlist around this song's vibe?\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "Found track via fuzzy matching: Looks by Steve Lacy",
+        "track": {
+          "track_id": "4Z9npQ93MrnIkRcTBKwSa3",
+          "title": "Looks",
+          "artist": "Steve Lacy",
+          "album": "Steve Lacy's Demo",
+          "lyrics": "[Hook]\nI want you and you want me\nBut we don't know each other enough\nTo tell\nLooks ain't enough\nLooks ain't enough\n\n[Verse]\nI know you think you like\nMe cause I'm the man\nAnd I be lookin' good\nBut you gotta understand\nThat there's more to this\nWhat if I got with you and turned out to be a total dick\nWould you be happy 'bout that?\nNo...\n\n[Hook]\nI want you and you want me\nBut we don't know each other enough\nTo tell\nLooks ain't enough\nLooks ain't enough",
+          "tags": [
+            "alternative rock",
+            "Alternative",
+            "indie",
+            "neo soul",
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2017-02-24",
+          "tempo": "94.21",
+          "key": "D minor",
+          "chord": "A:maj, D:min, C#:maj, A#:maj, A:maj, G:maj, D:min, A#:maj, A:maj, C:maj, A:min, A#:maj, G:min, C:maj, A:min, A#:maj, G:maj, C#:min, A#:maj, A:maj, C:maj, C#:maj, A#:maj, A:min",
+          "popularity": "0",
+          "caption": "A female singer sings this cool melody with backup singers in vocal harmony. The song is medium tempo with a groovy bass line, steady drumming rhythm, keyboard accompaniment and various percussion hits. The track is groovy and buoyant. ."
+        },
+        "message": "Awesome, so glad that hit the spot! A road trip playlist around that vibe sounds amazing. For the next stop on our journey, how about \"Looks\" by Steve Lacy? It's got that same smooth, slightly hazy R&B feel that will keep the good times rolling.",
+        "success": true,
+        "code": "201"
+      }
+    },
+    {
+      "turn_number": 3,
+      "listener_turn": {
+        "turn_number": 3,
+        "prompt": "name='files/uveaswtleufg' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 811345, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 0, 675281, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 811345, tzinfo=TzInfo(UTC)) sha256_hash='OWIyZGMwOGNiNjNmYWE1Y2ViNzNjZmM3NGU1NGE4ZWM3MWE5MjhkNzJjNzkyZTExMGNlYjdiNDA4MDI0M2U3Nw==' uri='https://generativelanguage.googleapis.com/v1beta/files/uveaswtleufg' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/dof4ysjuro6p' display_name=None mime_type='image/jpeg' size_bytes=153171 create_time=datetime.datetime(2025, 7, 28, 6, 20, 4, 276201, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 4, 178723, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 4, 276201, tzinfo=TzInfo(UTC)) sha256_hash='NTEwNjRhN2U0YjIxNTNiMDM5ZGViOTQzZWE4YTMwZTcwYTQ3NWM1NzAwNzJiYTU1NDhlZTIwYmFlYmM3YjA5NA==' uri='https://generativelanguage.googleapis.com/v1beta/files/dof4ysjuro6p' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 3\n\nYou just listened to this recommended track:\n- Title: Looks\n- Artist: Steve Lacy\n- Album: Steve Lacy's Demo\n\nThe recommendation system said: \"Awesome, so glad that hit the spot! A road trip playlist around that vibe sounds amazing. For the next stop on our journey, how about \"Looks\" by Steve Lacy? It's got that same smooth, slightly hazy R&B feel that will keep the good times rolling.\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance\nConsider your target turn count and current turn number:\n- **If this is an early turn in a long conversation**: Be more exploratory, ask follow-up questions, show curiosity\n- **If this is near your target turn count**: Be more decisive, show clear satisfaction or dissatisfaction\n- **If you've exceeded your target turn count**: The goal should be achieved or nearly achieved by now\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Consider: Does this align with my goal? How many turns do I have left? Am I making progress at the right pace?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your conversational response and next request. Adjust specificity based on remaining turns and goal progress.]\n```\n",
+        "thought": "I have achieved the primary goal of finding the specific song. My new goal is to build a road trip playlist around \"Night Drive\" by Ari Lennox. \"Looks\" by Steve Lacy has a smooth R&B vibe, which is good. It's a relaxed track, which fits the \"late-night drive\" feeling, even if it's not as dreamy or atmospheric as \"Night Drive.\" It's a solid addition to the playlist and moves me toward the extended goal. I still have turns to explore.thought: I have achieved my initial goal of finding the specific song. Now I am building a road trip playlist with that vibe. \"Looks\" by Steve Lacy is definitely in the right lane – it's smooth and chill, fitting the R&B mood for a drive. It's a good step towards building that playlist.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "This is nice! \"Looks\" definitely has that laid-back, smooth R&B feel that fits the road trip vibe. What else do you have that's similar, maybe something with a bit more of a dreamy, atmospheric sound like \"Night Drive\"?",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 3,
+        "prompt": "\n## Turn 3\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR', '4Z9npQ93MrnIkRcTBKwSa3']\n**Listener's Latest Message**: \"This is nice! \"Looks\" definitely has that laid-back, smooth R&B feel that fits the road trip vibe. What else do you have that's similar, maybe something with a bit more of a dreamy, atmospheric sound like \"Night Drive\"?\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener wants another smooth, dreamy, atmospheric R&B track for their road trip playlist. \"Dent Jusay\" by Matt Martians fits this request well, as it's tagged R&B/Soul and has a distinct dreamy quality perfect for setting a chill, atmospheric mood similar to \"Night Drive.\"thought: The listener is looking for another dreamy, atmospheric R&B track to fit their road trip playlist, similar to \"Night Drive.\" \"Dent Jusay\" by Matt Martians has the R&B/Soul tag and an ethereal, spaced-out sound that perfectly matches the requested dreamy and atmospheric vibe.",
+        "track": {
+          "track_id": "1goN1TN8DZDLRNizMciiho",
+          "title": "Dent Jusay",
+          "artist": "Matt Martians",
+          "album": "The Drum Chord Theory",
+          "lyrics": "[Intro]\n(Syd & Steve Lacy vocalizing)\n\n[Hook]\nDent Jusay you wanna fly away someday?\nSo won't you roll with me then?\nDent Jusay you wanna fly away someday?\nSo won't you roll with me then?\nDent Jusay\nDent Jusay\nDent Jusay\nDent Jusay\n\n[Verse 1: Syd]\nWhy you keep flexin' on me\nLike I'm just anybody\nThe view from here's a sight to see\nYou don't know what your missing\nYou might lose my attention\nDarling our flight's about to leave\n[Verse 2: Steve Lacy]\nSo you say you wanna fly?\nBut you say no, you're scared of heights\nHe don't keep you satisfied\nBut I'll be here when you decide (ohhhh)\n\n[Hook]\nDent jusay you wanna fly away someday\nSo won't you roll with me then\nDent jusay you wanna fly away someday\nSo won't you roll with me then\nDent jusay\nDent jusay\nDent jusay\nDent jusay\n\n[Outro: Group + Woman on phone]\n...Sneaking it into my titties but then I don't know—\nDon't\nIf one of those kind of shows where people be smoking in the crowds\nDang, you know—do-don't sneak the weed into your titties bro, like we'll be there in a second just put it- you can smoke with us too-just put it one of our like instrument cases and you'll be straight\nSo don't leave it in the car? 'Cause we said we walking right now to go to the place\nI mean you could leave it in the car 'cause we don't perform until midnight so we can always go back and get it\nAnd I got a blunt now rolled up—yeah we already got a blunt anyway—yeah we got hella weed too so and you got all access so you can like some back-in the back with us\nAlright, we here-we just parked, we just gonna walk in\nAlright shawty\nAlright, see y'all",
+          "tags": [
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2017-01-27",
+          "tempo": "147.83",
+          "key": "E major",
+          "chord": "A#:maj, A:maj, F:maj, B:maj, F:min, E:maj, F#:maj, E:maj, A#:maj, E:maj, F:min, A:min, G:maj, D#:maj, E:maj, F:min, G#:maj, C#:maj, E:maj, A#:min, A:min, A#:min, F:maj",
+          "popularity": "0",
+          "caption": "This pop song features a male voice singing the main melody. This is accompanied by percussion playing a simple beat in common time. The bass plays the root notes of the chords. A synth plays a repetitive melody in the background. Toward the end, the other instruments are not audible. This song can be played in a romantic movie."
+        },
+        "message": "Glad you're enjoying the ride! For something with a dreamy, atmospheric sound, definitely check out \"Dent Jusay\" by Matt Martians. It's got this super chill, almost floating R&B vibe that I think will fit right in with \"Night Drive.",
+        "success": true,
+        "code": "200"
+      }
+    },
+    {
+      "turn_number": 4,
+      "listener_turn": {
+        "turn_number": 4,
+        "prompt": "name='files/7o50u5a0bfkt' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 638101, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 0, 590583, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 638101, tzinfo=TzInfo(UTC)) sha256_hash='ZTJkZTBjYjQwODY3OWQwMzdmZmE0ODQ4OGYzODM5ODJlYzE2ZGQ4MzU2ODYzYWY1NTAzYzU5MTUwY2VkZDA0Ng==' uri='https://generativelanguage.googleapis.com/v1beta/files/7o50u5a0bfkt' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/jll68s5dg6rp' display_name=None mime_type='image/jpeg' size_bytes=277206 create_time=datetime.datetime(2025, 7, 28, 6, 20, 4, 289364, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 4, 178618, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 4, 289364, tzinfo=TzInfo(UTC)) sha256_hash='ODQ1NWI3OWUyNWEyOTY1MThmZTlhOGIyN2NkNzVjN2M2MTg2ZjMxNTFjMGMwNTFiNmQxZTIxYjY3YWZhNWJlNw==' uri='https://generativelanguage.googleapis.com/v1beta/files/jll68s5dg6rp' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 4\n\nYou just listened to this recommended track:\n- Title: Dent Jusay\n- Artist: Matt Martians\n- Album: The Drum Chord Theory\n\nThe recommendation system said: \"Glad you're enjoying the ride! For something with a dreamy, atmospheric sound, definitely check out \"Dent Jusay\" by Matt Martians. It's got this super chill, almost floating R&B vibe that I think will fit right in with \"Night Drive.\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance\nConsider your target turn count and current turn number:\n- **If this is an early turn in a long conversation**: Be more exploratory, ask follow-up questions, show curiosity\n- **If this is near your target turn count**: Be more decisive, show clear satisfaction or dissatisfaction\n- **If you've exceeded your target turn count**: The goal should be achieved or nearly achieved by now\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Consider: Does this align with my goal? How many turns do I have left? Am I making progress at the right pace?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your conversational response and next request. Adjust specificity based on remaining turns and goal progress.]\n```\n",
+        "thought": "Dent Jusay\" by Matt Martians definitely has that dreamy, atmospheric quality I was looking for, similar to \"Night Drive.\" It feels very cohesive with the road trip vibe I'm trying to build. This is a great addition to the playlist. I still have a few turns left, so I can continue to refine the playlist.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "Yes, \"Dent Jusay\" is perfect! That's exactly the kind of dreamy, atmospheric sound I was hoping for. It totally fits the late-night cruising mood. What's another track you'd recommend for this playlist that keeps that smooth, almost ethereal R&B vibe?",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 4,
+        "prompt": "\n## Turn 4\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR', '4Z9npQ93MrnIkRcTBKwSa3', '1goN1TN8DZDLRNizMciiho']\n**Listener's Latest Message**: \"Yes, \"Dent Jusay\" is perfect! That's exactly the kind of dreamy, atmospheric sound I was hoping for. It totally fits the late-night cruising mood. What's another track you'd recommend for this playlist that keeps that smooth, almost ethereal R&B vibe?\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener wants another smooth, ethereal R&B track for their playlist. \"Back to Me\" by Moonchild is a great fit as it is tagged R&B/Soul and its calm, jazzy undertones create a dreamy, atmospheric sound that aligns with the desired vibe.",
+        "track": {
+          "track_id": "0Y0JVqSlj8J512B5kjKekP",
+          "title": "Back to Me",
+          "artist": "Moonchild",
+          "album": "Be Free",
+          "lyrics": "Seems I'm never by my phone whenever you call\nAlways busy or having my fun\nAnd when you want to take me out I've no appetite at all\nSuppose I'm not a hungry woman\n\nMaybe you're still blaming everything on a case of bad timing\nScore's 1 for the silver lining\nEven my own friends have started wondering\nSo I ask you yes I do\n\nA what, a what-what, a what\nWhat keeps you coming\nWhat keeps you coming\nWhat keeps you coming back to me baby\n\nA what, a what-what, a what\nWhat keeps you coming\nWhat keeps you coming\nWhat keeps you coming back coming back\n\nI know you've heard me singing 'bout the men who spend the night\nSome of them you call your friends\nAnd even I'll agree baby that just ain't right\nAnd I'm sorry in the end but I ask you\nA what, a what-what, a what\nWhat keeps you coming\nWhat\nWhat keeps you coming back to me baby\n\nI'll never understand\nA what, a what-what, a what\nWhat\nWhat keeps you coming\nWhat keeps you coming back to me baby\n\nAgain I apologize\nNever meant to hurt your pride making up my mind\nBut how am I to get my message through\nWhen you, yes you, yes you\nWhen you mean so much to me, yes you do\n\nBaby, a what, a what-what, a what\nWhat keeps you coming\nWhat\nWhat keeps you coming back to me baby\n\nOhhh\nA what, a what-what, a what\nWhat keeps you coming\nWhat keeps you coming back\nMhmm back to me\nSo glad you do though",
+          "tags": [
+            "Jazz",
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2012-04-27",
+          "tempo": "94.19",
+          "key": "F# minor",
+          "chord": "B:maj, E:maj, B:maj, D:maj, C#:min, D:maj, B:maj, D:maj, D:maj, F#:min, B:maj, G#:maj, D#:maj, D:maj, E:min, B:maj, A#:maj",
+          "popularity": "41",
+          "caption": "A female singer sings this cool melody with backup singers in vocal harmony. The tempo is medium with a groovy bass line, steady drumming rhythm, keyboard accompaniment and other percussion hits. The song is story telling and passionate in nature. The audio quality is poor."
+        },
+        "message": "I'm so happy that \"Dent Jusay\" worked for you! To keep that smooth, ethereal R&B vibe going for your late-night cruise, I think you'll really appreciate \"Back to Me\" by Moonchild. It has a beautiful, calming atmosphere that's just perfect for winding down.",
+        "success": true,
+        "code": "200"
+      }
+    },
+    {
+      "turn_number": 5,
+      "listener_turn": {
+        "turn_number": 5,
+        "prompt": "name='files/00mp80hihl62' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 743690, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 0, 632945, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 743690, tzinfo=TzInfo(UTC)) sha256_hash='MTk0OWE2OTA3OTYxYjBmZmRlODU1YmEzMWNiNDcwNTE5ZWZkMWQ1ZTk5ZWVkNTg0YmY5ZWU2ZDBjMTg4YjJkYw==' uri='https://generativelanguage.googleapis.com/v1beta/files/00mp80hihl62' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/onml04gma1rl' display_name=None mime_type='image/jpeg' size_bytes=43652 create_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 709648, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 3, 668933, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 709648, tzinfo=TzInfo(UTC)) sha256_hash='ZTUwODg5ZDRkMWEzNDg5MDM5NGY2NjY0MmIzZDA0MjdhODcyYzFjMzdlZDNhMDI2NDhkNjZlNmVjYWUzNWZlMQ==' uri='https://generativelanguage.googleapis.com/v1beta/files/onml04gma1rl' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 5\n\nYou just listened to this recommended track:\n- Title: Back to Me\n- Artist: Moonchild\n- Album: Be Free\n\nThe recommendation system said: \"I'm so happy that \"Dent Jusay\" worked for you! To keep that smooth, ethereal R&B vibe going for your late-night cruise, I think you'll really appreciate \"Back to Me\" by Moonchild. It has a beautiful, calming atmosphere that's just perfect for winding down.\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance\nConsider your target turn count and current turn number:\n- **If this is an early turn in a long conversation**: Be more exploratory, ask follow-up questions, show curiosity\n- **If this is near your target turn count**: Be more decisive, show clear satisfaction or dissatisfaction\n- **If you've exceeded your target turn count**: The goal should be achieved or nearly achieved by now\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Consider: Does this align with my goal? How many turns do I have left? Am I making progress at the right pace?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your conversational response and next request. Adjust specificity based on remaining turns and goal progress.]\n```\n",
+        "thought": "Back to Me\" by Moonchild is definitely a good fit. It's smooth, calm, and has that ethereal quality that works for a late-night drive. It maintains the desired vibe for the road trip playlist. I'm building a nice collection now. I still have a few turns left, so I'll keep the conversation going to expand the playlist.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "Yes, Moonchild is a great choice! \"Back to Me\" fits perfectly with the serene, late-night atmosphere. This playlist is really coming together. Do you have any other artists or songs that have a similar calm, soulful, and perhaps slightly jazzy R&B feel?",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 5,
+        "prompt": "\n## Turn 5\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR', '4Z9npQ93MrnIkRcTBKwSa3', '1goN1TN8DZDLRNizMciiho', '0Y0JVqSlj8J512B5kjKekP']\n**Listener's Latest Message**: \"Yes, Moonchild is a great choice! \"Back to Me\" fits perfectly with the serene, late-night atmosphere. This playlist is really coming together. Do you have any other artists or songs that have a similar calm, soulful, and perhaps slightly jazzy R&B feel?\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener is enjoying the serene, soulful, and slightly jazzy R&B feel and wants more. \"Nakamarra (Rox N Stix Desert Mix)\" by Hiatus Kaiyote fits this description well. While not explicitly tagged Jazz, Hiatus Kaiyote is known for their unique neo-soul sound with strong jazz influences, offering a similar sophisticated and calming vibe.thought: The listener is looking for more calm, soulful, and slightly jazzy R&B. \"Nakamarra (Rox N Stix Desert Mix)\" by Hiatus Kaiyote is an excellent fit, as Hiatus Kaiyote is known for their neo-soul sound with significant jazz influences, providing that serene and sophisticated R&B feel.",
+        "track": {
+          "track_id": "19GxZZECG7HLXPCxIa99zD",
+          "title": "Nakamarra (Rox N Stix Desert Mix)",
+          "artist": "Hiatus Kaiyote",
+          "album": "Recalibrations, Vol. 1",
+          "lyrics": "[Verse 1]\nHannah my darling\nI will follow you into the sunrise under desert sky\nWe fly, rise together\nWith our hearts upon our sleeves for all to see\nWe two will breathe, aqua queen though vast distance between us\nHeart sails with love for you\n\n[Refrain]\nI love you, I love you I do\nLove you, I love you, I love you I do\n\n[Verse 2]\nNakamarra sweet red earth will hold you\nLike the strength you bless to me\nTrue we engage humility, watch me struggle with your words\nHowever truthful they may be\nWe'll see in time, opening our hearts\nAnd nurturing our minds to shine\n\n[Refrain]\nI love you, love you, I love you I do...\nLove you, I love you, I love you I do...\n[Verse 3]\nOh, it sets our hearts to fire\nSweeps you and I\nHoney don't you know, it sets our heart to fire\nSweeps you and I\nHoney don't you know we too will pulse in through this light\nHoney don't you know we too will pulse\n\n[Refrain]\nI'll always love you, love you, love you I do\nLove you, I love you, I love you I do\n\n[Verse 1]\nHannah my darling\nI will follow you into the sunrise under desert sky\nWe fly, rise together\nWith our hearts upon our sleeves for all to see\nWe two will breathe, aqua queen though vast distance between us\nHeart sails with love for you\n\n[Refrain]\nI love you, I love you I do\nLove you, I love you, I love you I do\n\n[Verse 3]\nOh, it sets our hearts to fire\nSweeps you and I\nHoney don't you know, it sets our heart to fire\nSweeps you and I\nHoney don't you know we too will pulse in through this light\nHoney don't you know we too will pulse\n[refrain]\nI'll always love you, love you, love you I do\nLove you, I love you, I love you I do...\nYeah yeah yeah...",
+          "tags": [],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2016-05-16",
+          "tempo": "86.93",
+          "key": "Ab major",
+          "chord": "C:maj, E:maj, G#:maj, C#:maj, A#:maj, C#:maj, D#:maj, G#:maj, D#:maj, A#:maj, C#:maj, G#:maj, C#:maj, D#:maj, C#:maj, A#:maj, C:maj, E:min, A:maj, G#:maj, G:maj, C#:maj, C:min",
+          "popularity": "29",
+          "caption": "This clip features a female voice singing the main melody. This is accompanied by percussion playing a simple beat. The bass is played on the root notes of the chords. A synth plays a repetitive melody in the background. The mood of this song is romantic. This song can be played in a romantic movie."
+        },
+        "message": "So glad this playlist is hitting the spot! To continue that calm, soulful, and slightly jazzy R&B feel, you absolutely have to check out \"Nakamarra (Rox N Stix Desert Mix)\" by Hiatus Kaiyote. Their sound is incredibly unique and I think it will fit beautifully with the rest of your selections.",
+        "success": true,
+        "code": "200"
+      }
+    },
+    {
+      "turn_number": 6,
+      "listener_turn": {
+        "turn_number": 6,
+        "prompt": "name='files/sfja54e2k5db' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 1, 66468, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 1, 23973, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 1, 66468, tzinfo=TzInfo(UTC)) sha256_hash='MTFhOGI1YjhjZmFkMDQ3ZWNlMzQ0MDQzZGY0MGI4M2RhZDYxMjEwY2UwOGY3MTRmNzMyZmZjYTNmMWU0MDgxYg==' uri='https://generativelanguage.googleapis.com/v1beta/files/sfja54e2k5db' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/aaaq84k68iks' display_name=None mime_type='image/jpeg' size_bytes=179861 create_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 925658, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 3, 812102, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 925658, tzinfo=TzInfo(UTC)) sha256_hash='ODYxNGYxZjJmMWMyNDg2ODNlZDk2NTEzODdmMzY2YzhiYTYwZDkxOTQ1ZDBhN2M3ZmQ0YTRjNzA1MzRmYTYxOQ==' uri='https://generativelanguage.googleapis.com/v1beta/files/aaaq84k68iks' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 6\n\nYou just listened to this recommended track:\n- Title: Nakamarra (Rox N Stix Desert Mix)\n- Artist: Hiatus Kaiyote\n- Album: Recalibrations, Vol. 1\n\nThe recommendation system said: \"So glad this playlist is hitting the spot! To continue that calm, soulful, and slightly jazzy R&B feel, you absolutely have to check out \"Nakamarra (Rox N Stix Desert Mix)\" by Hiatus Kaiyote. Their sound is incredibly unique and I think it will fit beautifully with the rest of your selections.\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance\nConsider your target turn count and current turn number:\n- **If this is an early turn in a long conversation**: Be more exploratory, ask follow-up questions, show curiosity\n- **If this is near your target turn count**: Be more decisive, show clear satisfaction or dissatisfaction\n- **If you've exceeded your target turn count**: The goal should be achieved or nearly achieved by now\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Consider: Does this align with my goal? How many turns do I have left? Am I making progress at the right pace?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your conversational response and next request. Adjust specificity based on remaining turns and goal progress.]\n```\n",
+        "thought": "Nakamarra (Rox N Stix Desert Mix)\" by Hiatus Kaiyote is an excellent addition! It brings that jazzy, soulful, and slightly ethereal vibe I was hoping for. It fits perfectly into the late-night road trip playlist, maintaining the calm and dreamy atmosphere. This is a very strong recommendation. I'm satisfied with the current playlist and the direction it's going. I still have a couple of turns to maximize the playlist's diversity while staying true to the vibe.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "Oh wow, Hiatus Kaiyote is fantastic! \"Nakamarra\" absolutely nails that calm, soulful, and jazzy R&B feel. It's a perfect fit for the playlist. This is getting really good. Do you have one more track that's in a similar vein, perhaps something with a smooth bassline or even some subtle percussion?",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 6,
+        "prompt": "\n## Turn 6\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR', '4Z9npQ93MrnIkRcTBKwSa3', '1goN1TN8DZDLRNizMciiho', '0Y0JVqSlj8J512B5kjKekP', '19GxZZECG7HLXPCxIa99zD']\n**Listener's Latest Message**: \"Oh wow, Hiatus Kaiyote is fantastic! \"Nakamarra\" absolutely nails that calm, soulful, and jazzy R&B feel. It's a perfect fit for the playlist. This is getting really good. Do you have one more track that's in a similar vein, perhaps something with a smooth bassline or even some subtle percussion?\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener is looking for another calm, soulful, and jazzy R&B track with a smooth bassline or subtle percussion. \"Spread Too Thin (feat. Lindsay Olsen)\" by Joomanji fits this description, as it's R&B/Soul and typically features intricate, laid-back instrumentation that includes noticeable bass and percussion, aligning with the \"smooth bassline\" request.thought: The listener is looking for another calm, soulful, and jazzy R&B track, specifically mentioning a smooth bassline or subtle percussion. \"Spread Too Thin (feat. Lindsay Olsen)\" by Joomanji fits this perfectly, as it's an R&B/Soul track known for its smooth, understated instrumentation including prominent bass and percussion elements.",
+        "track": {
+          "track_id": "0Lgk4pD3Y0iE9w2xDilhjj",
+          "title": "Spread Too Thin (feat. Lindsay Olsen)",
+          "artist": "Joomanji",
+          "album": "Manj",
+          "lyrics": "[Verse 1]\nI don't want to see love cavin' in\nBecause your walls are drawn out too thinly\nI don't want to see your love cavin' in\nBecause your walls are drawn out too thinly\nThinly\n\n[Chorus]\nUh, uh-uh, uh-uuh\nUh, uh-uh, uuh...\n\n[Verse 2]\nSummer day, don't call me up\nWith your hairy hand\nMhmm, mhmm, mhmhmm\nMhmm, mhmm, mhmhm\n\n[Verse 1]\nI don't want to see your love cavin' in\nBecause your walls are drawn out too thinly (Thinly)\nI don't want to see your love cavin'\nBecause your walls are drawn out too thinly (Thinly)\n[Chorus]\nUh, uh-uh, uh-uuh\nUh, uh-uh, uuh...\n\nI don't want to see love cavin' in\nBecause your walls are drawn out too thinly (Thinly)\nI don't want to see your love cavin' in\nBecause your walls are drawn out too thinly\n\n[Chorus]\nUh, uh-uh, uh-uuh\nUh, uh-uh, uuh...\nMhmm, mhmm, mhmhmm\nMhmm, mhmm, mhmhm\n\n[Outro]\nSummer day, don't call me up\nMhmm, mhmm, mhmhmm\nMhmm, mhmm, mhmhm\nUh, uh-uh, uh\nUh, uh-uh, uuh\nUh, uh-uh, uh-uuh\nUh, uh-uh, uh\nUh, uh-uh, uuh\nUh, uh-uh, uh-uuh",
+          "tags": [
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2013-02-01",
+          "tempo": "88.17",
+          "key": "D# minor",
+          "chord": "F#:maj, G#:maj, A#:maj, D#:min, F#:maj, G#:maj, F:min, D#:min, F#:maj, G#:maj, F:min, F:maj, D#:min, F#:maj, G#:min, F#:maj, D#:min, F#:maj, G#:min, F#:maj",
+          "popularity": "52",
+          "caption": "This is a jazz music piece. It is an instrumental piece. There is a keyboard playing the main tune while a bass guitar is playing in the background. The rhythmic background consists of a jazz acoustic drum beat. The atmosphere is chill. This piece could be used in the soundtrack of a romance movie that takes place in the city."
+        },
+        "message": "So glad you're loving the selections! For one more track that keeps that calm, soulful R&B vibe with a smooth bassline, you've got to hear \"Spread Too Thin\" by Joomanji, featuring Lindsay Olsen. It's got that perfect laid-back groove that I think will be a fantastic addition to your road trip playlist!",
+        "success": true,
+        "code": "200"
+      }
+    },
+    {
+      "turn_number": 7,
+      "listener_turn": {
+        "turn_number": 7,
+        "prompt": "name='files/2k0eoq10ol20' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 893322, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 0, 760763, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 893322, tzinfo=TzInfo(UTC)) sha256_hash='YzE5MzVkMjU0MTU5OTA5Y2M0ODQ0MTJkYzBjMTQ5YWIzYThhNWVkYjFjNzQzYjEyM2U5ODBlMDVhZmQzY2U5Nw==' uri='https://generativelanguage.googleapis.com/v1beta/files/2k0eoq10ol20' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/ipkvs95anaza' display_name=None mime_type='image/jpeg' size_bytes=240710 create_time=datetime.datetime(2025, 7, 28, 6, 20, 4, 516591, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 4, 410866, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 4, 516591, tzinfo=TzInfo(UTC)) sha256_hash='Mzk0MDhjOTMyYjdlMmE0NTY1OTNlNjg5NGMxYTZmMzdiMTBiOTE0ZDJmYWVlZWUzYTdkZWIwMzM5MDIyZmI1OQ==' uri='https://generativelanguage.googleapis.com/v1beta/files/ipkvs95anaza' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 7\n\nYou just listened to this recommended track:\n- Title: Spread Too Thin (feat. Lindsay Olsen)\n- Artist: Joomanji\n- Album: Manj\n\nThe recommendation system said: \"So glad you're loving the selections! For one more track that keeps that calm, soulful R&B vibe with a smooth bassline, you've got to hear \"Spread Too Thin\" by Joomanji, featuring Lindsay Olsen. It's got that perfect laid-back groove that I think will be a fantastic addition to your road trip playlist!\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance\nConsider your target turn count and current turn number:\n- **If this is an early turn in a long conversation**: Be more exploratory, ask follow-up questions, show curiosity\n- **If this is near your target turn count**: Be more decisive, show clear satisfaction or dissatisfaction\n- **If you've exceeded your target turn count**: The goal should be achieved or nearly achieved by now\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Consider: Does this align with my goal? How many turns do I have left? Am I making progress at the right pace?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your conversational response and next request. Adjust specificity based on remaining turns and goal progress.]\n```\n",
+        "thought": "Spread Too Thin\" by Joomanji featuring Lindsay Olsen is another fantastic track. It has that smooth bassline and chill R&B vibe that I asked for, making it a perfect fit for the road trip playlist. The playlist is really solid now. I have one more turn, so I can ask for one final track to round out the experience, or perhaps a slight variation on the theme.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "Yes! \"Spread Too Thin\" is exactly what I was looking for. The smooth bassline really adds to that cruising atmosphere. This playlist is absolutely perfect for late-night drives now. To round it out, could you give me one more recommendation that has that calm, soulful R&B essence, but maybe with a slightly more uplifting or hopeful feeling, while still keeping it chill?",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 7,
+        "prompt": "\n## Turn 7\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR', '4Z9npQ93MrnIkRcTBKwSa3', '1goN1TN8DZDLRNizMciiho', '0Y0JVqSlj8J512B5kjKekP', '19GxZZECG7HLXPCxIa99zD', '0Lgk4pD3Y0iE9w2xDilhjj']\n**Listener's Latest Message**: \"Yes! \"Spread Too Thin\" is exactly what I was looking for. The smooth bassline really adds to that cruising atmosphere. This playlist is absolutely perfect for late-night drives now. To round it out, could you give me one more recommendation that has that calm, soulful R&B essence, but maybe with a slightly more uplifting or hopeful feeling, while still keeping it chill?\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener is looking for one final track to complete their playlist, seeking a calm, soulful R&B song with a slightly more uplifting or hopeful, yet still chill, feeling. \"Joy\" by Leven Kali is tagged R&B/Soul and its title and lyrical content ('So we want (JOY)') inherently suggest an uplifting and hopeful sentiment, while maintaining a smooth and chill vibe.thought: The listener wants a final track that is calm, soulful R&B but with a slightly more uplifting/hopeful, yet still chill, feeling. \"Joy\" by Leven Kali is a perfect match as it's an R&B/Soul track with a title and lyrical theme that clearly convey upliftment and hope, while still being laid-back and smooth.",
+        "track": {
+          "track_id": "2QmJfxcWEMuT1gDqmTdjEv",
+          "title": "Joy",
+          "artist": "Leven Kali",
+          "album": "Joy",
+          "lyrics": "[Based on Performance in COLORS BERLIN]\n\n[Verse 1:]\n(Uh)\nSo we want (JOY)\nMusic bizz bought me up\nTrynna ruin all of my friendships\nBut I keep the (JOY)\n(Uh) I was eighteen\nMaking beats in my studio\nI did it for the (JOY)\n(Uh) Now you might feel it take too long\nBut we gon' fight and keep on marching to our dream\n(Yeah, yeah, Uh)\n\n[Verse 2:]\nIt break my heart\nEvery time I turn the news\nOn and see the police\nShot another young brother black (BOY)\nYou know we had a mother father grandmother brother sister\nBut you see him as another (BLACK BOY) (Uh)\nNow you might feel it take too long\nBut we gon' fight and keep on marching to our dream\n(Yeah, yeah, Uh)\n[Chorus:]\nAll we want, all we want yeah\nAll we want, all we want yeah\nAll we want, all we want yeah\nAll we want is some (JOY)\nAll we want, all we want\nAll we want, all we want\nAll we want, all we want yeah\nAll we want is (Uh!)\n\n[Verse 3:]\nAround the world man\nNeed some peace on earth man\nAsking for a change\nOh I'm praying for some (JOY)\nMan they blowing up France\nAnd they killing kids in class\nSo we need a little (JOY)\nNow you might feel it take too long\nBut we gon' fight and keep on marching to our dream\n(Yeah, yeah, Uh)\n\n[Verse 4:]\nThis land is your land\nThis land is my land\nLet's just be grown men\nYou're acting like a (BOY)\nGotta, gotta both stand\nMAN! You gotta vote man\nThat's your only (VOICE) (Uh!)\nNow you might feel it take too long\nBut we gon' fight and keep on marching to our dream (Yeah)\n(Uh, Oh~ yeah)\n[Chorus:]\nCause all we want, yeah\nAll we want, all we want\nAll we want, all we want yeah\nAll we want, all we want is (JOY)\nAll we want, all we want yeah\nAll we want, all we want yeah\nAll we want, all we want yeah\n(All we want, JOY)\n\n[Speech:]\nSo even though, we face the difficulties, of today and tomorrow\nI still have a dream!",
+          "tags": [
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2016-11-15",
+          "tempo": "89.21",
+          "key": "Bb minor",
+          "chord": "Unknown",
+          "popularity": "32",
+          "caption": "This R&B song features a male voice singing the main melody. The melody is repetitive. This is accompanied by percussion playing a simple beat in common time. The bass plays the root notes of the chords. Hand claps are played at every alternate count. A piano plays chords in the background. The mood of this song is romantic. This song can be played in a romantic movie."
+        },
+        "message": "Amazing! So glad this playlist is hitting all the right notes for your late-night drives. To give it that perfect uplifting and hopeful, but still super chill, R&B close, I highly recommend \"Joy\" by Leven Kali. It's got that wonderful soulful feel with a really positive energy. Enjoy your road trips!",
+        "success": true,
+        "code": "200"
+      }
+    },
+    {
+      "turn_number": 8,
+      "listener_turn": {
+        "turn_number": 8,
+        "prompt": "name='files/yofa1nj8fky7' display_name=None mime_type='audio/x-wav' size_bytes=96044 create_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 799070, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 0, 716464, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 0, 799070, tzinfo=TzInfo(UTC)) sha256_hash='ODRkNTUyZjdjZjA3NGI4OTBhMTE2ZDc1MjkyZTU1ZGVkZTQ4MTM5N2VjMGU4YmM0YzRiNTUyYjAwODI3ZGIzYQ==' uri='https://generativelanguage.googleapis.com/v1beta/files/yofa1nj8fky7' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=Nonename='files/cr159bgt1hl1' display_name=None mime_type='image/jpeg' size_bytes=63499 create_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 118999, tzinfo=TzInfo(UTC)) expiration_time=datetime.datetime(2025, 7, 30, 6, 20, 2, 983687, tzinfo=TzInfo(UTC)) update_time=datetime.datetime(2025, 7, 28, 6, 20, 3, 118999, tzinfo=TzInfo(UTC)) sha256_hash='YTAwZjFkM2E5ODcxNDBhZTE4YmM5MmJkZmUzZTQ4NmJkODdkYjI0ODNjMzllYTNiY2QyODFkOWIxMDE3ZDQwMg==' uri='https://generativelanguage.googleapis.com/v1beta/files/cr159bgt1hl1' download_uri=None state=<FileState.ACTIVE: 'ACTIVE'> source=<FileSource.UPLOADED: 'UPLOADED'> video_metadata=None error=None\n## Turn 8\n\nYou just listened to this recommended track:\n- Title: Joy\n- Artist: Leven Kali\n- Album: Joy\n\nThe recommendation system said: \"Amazing! So glad this playlist is hitting all the right notes for your late-night drives. To give it that perfect uplifting and hopeful, but still super chill, R&B close, I highly recommend \"Joy\" by Leven Kali. It's got that wonderful soulful feel with a really positive energy. Enjoy your road trips!\"\n\nYour response MUST be strictly guided by your Conversation Goal and your Listener Profile. Assess if this track moves you closer to achieving your goal.\n\n### Pacing Guidance\nConsider your target turn count and current turn number:\n- **If this is an early turn in a long conversation**: Be more exploratory, ask follow-up questions, show curiosity\n- **If this is near your target turn count**: Be more decisive, show clear satisfaction or dissatisfaction\n- **If you've exceeded your target turn count**: The goal should be achieved or nearly achieved by now\n\n### Response Format\nYour response MUST be ONLY a single yaml block with three fields: `thought`, `goal_progress_assessment`, `message`. Maintain coherence with the chat history.\nPlease use English language for thought and message.\n\n```yaml\nthought: [Your internal reaction to the track. Consider: Does this align with my goal? How many turns do I have left? Am I making progress at the right pace?]\ngoal_progress_assessment: [MOVES_TOWARD_GOAL or DOES_NOT_MOVE_TOWARD_GOAL, based on whether this recommendation moves you closer to achieving your Conversation Goal.]\nmessage: [Your conversational response and next request. Adjust specificity based on remaining turns and goal progress.]\n```\n",
+        "thought": "Joy\" by Leven Kali is a perfect final track! It hits that sweet spot of being calm and soulful R&B, but with a subtle uplifting feel that rounds out the playlist beautifully. It's still chill enough for a late-night drive, which was the core request. I've now received a great set of recommendations that started with finding a specific song and expanded into a full playlist matching the vibe. My goal of a 8-turn conversation with high target specificity for a playlist around \"Night Drive\" has been successfully achieved. I will now continue the conversation and ask for more recommendations, as per the instruction.",
+        "goal_progress_assessment": "MOVES_TOWARD_GOAL",
+        "message": "Joy\" by Leven Kali is absolutely perfect to complete this playlist! It's got that wonderful, positive, chill R&B vibe that I was looking for. Thank you so much, this road trip playlist is amazing! Do you have any other artists or albums you'd recommend that capture this whole laid-back, soulful R&B aesthetic? I'm open to discovering new favorites!",
+        "success": true,
+        "code": "200"
+      },
+      "recsys_turn": {
+        "turn_number": 8,
+        "prompt": "\n## Turn 8\n\n### CONVERSATION CONTEXT:\n**Previously Recommended Tracks** (DO NOT recommend these again): ['3VeuvRWfJLSOzeVPrgi5MR', '4Z9npQ93MrnIkRcTBKwSa3', '1goN1TN8DZDLRNizMciiho', '0Y0JVqSlj8J512B5kjKekP', '19GxZZECG7HLXPCxIa99zD', '0Lgk4pD3Y0iE9w2xDilhjj', '2QmJfxcWEMuT1gDqmTdjEv']\n**Listener's Latest Message**: \"Joy\" by Leven Kali is absolutely perfect to complete this playlist! It's got that wonderful, positive, chill R&B vibe that I was looking for. Thank you so much, this road trip playlist is amazing! Do you have any other artists or albums you'd recommend that capture this whole laid-back, soulful R&B aesthetic? I'm open to discovering new favorites!\"\n\n### CRITICAL REQUIREMENTS:\n1. **NO DUPLICATES**: You MUST NOT recommend any track from the \"Previously Recommended Tracks\" list above\n2. **TRACK POOL ONLY**: You can ONLY recommend from your available tracks pool\n3. **EXACT FORMAT**: Your response must be ONLY the YAML block below - no additional text\n4. **EXACT TRACK ID**: Use the precise track_id from your available tracks\n\n**REMEMBER**: Maintain conversation coherence and respond naturally to the listener's feedback while strictly following the format.\n\n\n### MANDATORY RESPONSE FORMAT:\n\n**CRITICAL FORMATTING RULES**:\n- Your ENTIRE response = ONLY the YAML block above\n- Do NOT add any text before the YAML block\n- Do NOT add any text after the YAML block\n- Do NOT use markdown or other formatting outside the YAML\n- The track_id MUST be an exact match from your available tracks\n- The track_id MUST NOT appear in the used tracks list\n\nPlease use English language for thought and message.\n### Response Format:\n```yaml\nthought: [CONCISE reasoning in 2-3 sentences maximum. Briefly acknowledge listener feedback and explain why your chosen track fits their request. DO NOT analyze multiple tracks.]\ntrack_id: [The exact track_id for your next recommendation - must NOT be in the used tracks list]\nmessage: [A natural, conversational response that acknowledges their feedback and introduces the next track.]\n```\n\n**IMPORTANT**: Keep the \"thought\" field BRIEF and FOCUSED. Do not analyze multiple tracks or provide extensive comparisons. Simply state why your chosen track matches the listener's request.\n",
+        "thought": "The listener is happy with the playlist and now wants to discover new artists or albums with a laid-back, soulful R&B aesthetic. \"Smile\" by Leven Kali is an excellent choice as it's from the same artist as the previously liked \"Joy\" and is tagged R&B/Soul, ensuring it fits the desired aesthetic and provides a new discovery from a familiar sound.thought: The listener is happy with the playlist and wants new artists/albums with a laid-back, soulful R&B aesthetic. \"Smile\" by Leven Kali is a good choice because it's by the same artist as \"Joy,\" which they loved, and it carries the same R&B/Soul tag, perfectly fitting the desired relaxed and soulful vibe.",
+        "track": {
+          "track_id": "5Wbjjde5ez7sx22OtmrXKV",
+          "title": "Smile",
+          "artist": "Leven Kali",
+          "album": "Smile",
+          "lyrics": "[Introduction]\nOh, oh, yeah, yeah, uh\n\n[Verse 1]\nI feel fine (I feel fine)\nYou should try (You should try)\nTake some time (Take some time)\nWe'll be as fine (We'll be as fine)\nYou look so anxious but I know you wanna smile, baby\n\nMmm, mmm, mmm\n\nLead in slow (Slowly)\nWe can meditate right here in front of everybody, baby\nYou look so anxious but I know you wanna smile, baby\n(You wanna smile, baby)\n\n[Chorus]\nI can teach you how to smile, babe\nI'm your plug, I'm your doctor, I'm your everything\nI need you to smile, babe\nIf you follow my direction all the love is endless\nBaby, just smile\n[Verse 2]\nYeah, baby it's no secret no (No)\nEverybody knows and we can't hide it, cause we stand out\nOh yeah\nYou look so anxious but I know you wanna smile, baby\nOh yeah\n\n[Chorus]\nI'll teach you how to smile, baby\nI'll be your pusher, and your doctor, I'm your everything\nI need you to smile, baby, need you to smile, baby\nMmm\nIf you follow my directions all the love is endless\nBaby, just smile, yeah\n\n[Ad Lib]\nMmmm, Yeah\nI'm your everything I need you to smile, baby\nMmmm, Mmmm\nAll the love is endless, baby, just smile\n\nYeah, baby smile for me, smile for me, smile for me\nYeah, oh, yeah, yeah, yeah, yeah yeah yeah\nBaby, just smile, babe\n\nBaby, just smile, oh",
+          "tags": [
+            "rnb",
+            "R&B/Soul"
+          ],
+          "album_art_path": null,
+          "duration": null,
+          "spotify_track_release_date": "2017-05-25",
+          "tempo": "105.24",
+          "key": "C major",
+          "chord": "Unknown",
+          "popularity": "47",
+          "caption": "This is a pop music piece. There is a male vocalist singing melodically in the lead. The main tune is being played by the acoustic guitar and the electric guitar while the bass guitar is playing in the background. The rhythmic background is provided by a slow tempo acoustic drum beat. The atmosphere is easygoing. This piece could be used in the soundtrack of a teenage drama movie or a TV show."
+        },
+        "message": "You're so welcome! I'm thrilled the playlist came together perfectly for you. Since you enjoyed \"Joy\" by Leven Kali so much, I have a feeling you'll also love another track from them called \"Smile.\" It definitely keeps that chill, soulful R&B aesthetic going, and who doesn't need more reasons to smile?",
+        "success": true,
+        "code": "200"
+      }
+    }
+  ]
+}
