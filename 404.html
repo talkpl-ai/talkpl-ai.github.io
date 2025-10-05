@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found</title>
+  <meta name="robots" content="noindex">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { display: flex; align-items: center; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background: #f9fafb; }
+    .container { text-align: center; padding: 24px; }
+    .title { font-size: 24px; margin: 0 0 8px; }
+    .desc { color: #6b7280; margin: 0 0 16px; }
+    .hint { font-size: 14px; color: #6b7280; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Redirecting if available…</h1>
+    <p class="desc">We couldn't find this page at the root. Checking under <code>/p/</code>…</p>
+    <p class="hint">If nothing happens, you can go back to the <a href="/">homepage</a>.</p>
+  </div>
+  <script>
+    (function() {
+      try {
+        var path = window.location.pathname || '/';
+        // If already under /p/, send to homepage (fallback policy for the rest)
+        if (path === '/') {
+          return;
+        }
+        if (path.indexOf('/p/') === 0) {
+          window.location.replace('/');
+          return;
+        }
+
+        var segments = path.split('/').filter(function(s) { return s.length > 0; });
+        if (segments.length === 0) {
+          return;
+        }
+
+        var project = segments[0];
+        var restSegments = segments.slice(1);
+
+        // Build candidate paths under /p/
+        var candidateBase = '/p/' + project;
+        var candidatePath = candidateBase + (restSegments.length ? '/' + restSegments.join('/') : '/');
+
+        // First try the exact candidate path (for assets or files), then try directory index
+        function tryFetch(url) {
+          return fetch(url, { method: 'HEAD', cache: 'no-store', redirect: 'follow' }).then(function(res) {
+            return res && res.ok;
+          }).catch(function() { return false; });
+        }
+
+        function redirect(to) {
+          var search = window.location.search || '';
+          var hash = window.location.hash || '';
+          // Use replace to avoid creating an extra history entry
+          window.location.replace(to + search + hash);
+        }
+
+        // Sequentially probe: exact path, then directory index. Otherwise, fallback to homepage.
+        tryFetch(candidatePath).then(function(ok) {
+          if (ok) {
+            redirect(candidatePath);
+            return 'done';
+          }
+          var withIndex = candidatePath.endsWith('/') ? candidatePath + 'index.html' : candidatePath + '/index.html';
+          return tryFetch(withIndex).then(function(okIdx) {
+            if (okIdx) {
+              // Prefer clean URL with trailing slash when index.html exists
+              var clean = candidatePath.endsWith('/') ? candidatePath : candidatePath + '/';
+              redirect(clean);
+              return 'done';
+            }
+            return 'not_found';
+          });
+        }).then(function(status) {
+          if (status !== 'done') {
+            redirect('/');
+          }
+        });
+      } catch (e) {
+        // Swallow; fallback is the static 404 content
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
