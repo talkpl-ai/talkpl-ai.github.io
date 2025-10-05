@@ -410,8 +410,16 @@
                 .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .75rem; border: 1px solid #e5e7eb; }
                 .badge-on { background: #e8f0fe; color: #1e3a8a; border-color: #bfd3fe; }
                 .badge-off { background: #f9fafb; color: #9ca3af; }
-                .tracks-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .25rem .75rem; }
-                .tracks-list .item { font-size: .9rem; color: #374151; }
+                .tracks-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .35rem .75rem; }
+                .tracks-list .item { font-size: .9rem; color: #374151; display: flex; align-items: center; gap: 6px; }
+                .audio-inline { height: 28px; vertical-align: middle; margin-left: 8px; }
+                /* Compact inline player */
+                .mini-player { display: inline-flex; align-items: center; gap: 6px; margin-left: 4px; white-space: nowrap; padding: 1px 6px 1px 1px; border: 1px solid #e2e8f0; border-radius: 7px; background: #ffffff; }
+                /* Inner R (6px) + padding-left (1px) ≈ outer R (7px) */
+                .mini-btn { width: 16px; height: 16px; flex: 0 0 16px; box-sizing: border-box; padding: 0; border-radius: 6px; border: none; background: #f1f5f9; color: #0f172a; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: inset 0 0 0 1px #cbd5e1; -webkit-tap-highlight-color: transparent; transition: background .15s ease, box-shadow .15s ease; }
+                .mini-btn:hover { background: #eaf0f6; box-shadow: inset 0 0 0 1px #94a3b8; }
+                .mini-bar { width: 80px; height: 4px; background: #e5e7eb; border-radius: 999px; position: relative; overflow: hidden; }
+                .mini-fill { position: absolute; top:0; left:0; height:100%; width:0%; background: #94a3b8; }
                 .chat-container { max-width: 900px; margin: 0 auto; }
                 .message-container { overflow: hidden; margin-bottom: 10px; }
                 .message { padding: 10px 15px; border-radius: 14px; max-width: 75%; border: 1px solid #ddd; background: #f8f9fa; }
@@ -428,11 +436,7 @@
             <div class="mb-4">
                 <h3 class="mb-2">Demo Conversations</h3>
                 <p class="text-muted" style="margin-top: -6px;">Each example shows a short goal-oriented session. Goal and listener profile are summarized first; conversation follows.</p>
-                <ul class="pagination justify-content-center">
-                    <li class="page-item active"><a class="page-link" href="#" data-demo="0">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#" data-demo="1">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#" data-demo="2">3</a></li>
-                </ul>
+                <ul id="tpd2-pages" class="pagination justify-content-center"></ul>
 
                 <div id="tpd2-meta" class="demo-meta"></div>
                 <div class="chat-section">
@@ -448,20 +452,58 @@
     </div>
 
     <script>
-        // Demo sessions (1..3)
+        // Demo sessions (auto-listed)
         const AVAILABLE_SESSIONS = [
+            { userId: '2907', date: '2020-01-30' },
+            { userId: '4006', date: '2019-02-15' },
+            { userId: '5100', date: '2019-05-15' },
             { userId: '643', date: '2019-12-14' },
-            { userId: '798', date: '2019-12-08' },
-            { userId: '2907', date: '2020-01-30' }
+            { userId: '798', date: '2019-12-08' }
         ];
 
         // ------- DEMO RENDERING (conversation-like view) -------
         async function fetchChat(session) {
-            const sessionPath = `./static/conversations/${session.userId}/${session.date}`;
+                    const sessionPath = `./static/conversations/${session.userId}/${session.date}`;
             const res = await fetch(`${sessionPath}/chat.json`);
             if (!res.ok) throw new Error('chat.json not found');
             const json = await res.json();
             return { json, sessionPath };
+        }
+
+        // ------- Preview audio URL loader -------
+        let previewMap;
+        async function loadPreviewMap() {
+            if (previewMap) return previewMap;
+            const res = await fetch('./preview_urls.csv');
+            if (!res.ok) { previewMap = new Map(); return previewMap; }
+            const text = await res.text();
+            previewMap = new Map();
+            const rows = parseCSV(text);
+            for (const cols of rows) {
+                if (cols.length < 6) continue;
+                const trackId = (cols[1] || '').trim();
+                const url = (cols[5] || '').trim();
+                if (trackId && url) previewMap.set(trackId, url);
+            }
+            return previewMap;
+        }
+        function getPreviewUrl(trackId) { return previewMap ? (previewMap.get(trackId) || null) : null; }
+        function parseCSV(text) {
+            const out = []; let row = []; let cur = ''; let inQuotes = false;
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                if (inQuotes) {
+                    if (ch === '"') { if (text[i + 1] === '"') { cur += '"'; i++; } else { inQuotes = false; } }
+                    else { cur += ch; }
+                } else {
+                    if (ch === '"') inQuotes = true;
+                    else if (ch === ',') { row.push(cur); cur = ''; }
+                    else if (ch === '\n' || ch === '\r') { if (cur.length || row.length) { row.push(cur); out.push(row); row = []; cur = ''; } if (ch === '\r' && text[i + 1] === '\n') i++; }
+                    else cur += ch;
+                }
+            }
+            if (cur.length || row.length) { row.push(cur); out.push(row); }
+            return out;
         }
 
         function renderMeta(json, sessionPath) {
@@ -491,10 +533,22 @@
             const specCode = (goal.specificity || '').toUpperCase();
             const catDesc = CATEGORY_DESCRIPTIONS[catCode] || '-';
             const specDesc = SPECIFICITY_DESCRIPTIONS[specCode] || '-';
-            function tracksPreview(items, max = 6) {
-                const list = (items || []).slice(0, max).map(t => `<div class="item">${(t.title||'-')} — ${(t.artist||'')}</div>`).join('');
-                const more = (items || []).length > max ? `<div class="small text-muted" style="margin-top:4px;">+${items.length - max} more</div>` : '';
-                return `<div class="tracks-list">${list}</div>${more}`;
+            function tracksPreview(items, opts) {
+                const max = (opts && typeof opts.max === 'number') ? opts.max : 6;
+                const withAudio = (opts && opts.withAudio) || 'none';
+                const single = !!(opts && opts.singleColumn);
+                const listHtml = (items || []).slice(0, max).map((t, idx) => {
+                    const base = `${(t.title||'-')} — ${(t.artist||'')}`;
+                    let audio = '';
+                    if (withAudio === 'all' || (withAudio === 'first' && idx === 0)) {
+                        const prev = getPreviewUrl(t.track_id);
+                        if (prev) audio = ` <span class=\"mini-audio\" data-src=\"${prev}\"></span>`;
+                    }
+                    return `<div class=\"item\">${base}${audio}</div>`;
+                }).join('');
+                const more = (items || []).length > max ? `<div class=\"small text-muted\" style=\"margin-top:4px;\">+${items.length - max} more</div>` : '';
+                const cls = single ? 'tracks-list single' : 'tracks-list';
+                return `<div class=\"${cls}\">${listHtml}</div>${more}`;
             }
 
             metaEl.innerHTML = `
@@ -503,16 +557,16 @@
                     <div class="badges">
                         <span class="badge badge-on">Shared with Listener</span>
                         <span class="badge badge-off">Not with RecSys</span>
-                    </div>
-                    ${tracksPreview(listenerTracks)}
-                </div>
+                                        </div>
+                    ${tracksPreview(listenerTracks, { withAudio: 'all', max: 5, singleColumn: true })}
+                                            </div>
 
                 <div class="meta-block">
                     <h5>Conversation Goal</h5>
                     <div class="badges">
                         <span class="badge badge-on">Shared with Listener</span>
                         <span class="badge badge-off">Not with RecSys</span>
-                    </div>
+                                            </div>
                     <div class="small text-muted">Category</div>
                     <div><strong>${goal.category || '-'}</strong> · ${catDesc}</div>
                     <div class="small text-muted" style="margin-top:6px;">Specificity</div>
@@ -521,8 +575,8 @@
                     <div>${goal.listener_goal || '-'}</div>
                     <div class="small" style="margin-top:6px;">
                         <a href="${sessionPath}/conversation_goal.json" target="_blank" rel="noopener">goal JSON</a>
-                    </div>
-                </div>
+                                            </div>
+                                        </div>
 
                 <div class="meta-block">
                     <h5>Listener Profile</h5>
@@ -536,8 +590,8 @@
                     <div>${profile.preferred_musical_culture || '-'}</div>
                     <div class="small" style="margin-top:6px;">
                         <a href="${sessionPath}/profiling.json" target="_blank" rel="noopener">profile JSON</a>
-                    </div>
-                </div>
+                                    </div>
+                                </div>
 
                 <div class="meta-block">
                     <h5>Recommendation Pool</h5>
@@ -545,11 +599,15 @@
                         <span class="badge badge-off">Not shared with Listener</span>
                         <span class="badge badge-on">Shared with RecSys</span>
                     </div>
-                    ${tracksPreview(poolTracks)}
+                    <details>
+                        <summary>Show recommendation pool (${poolTracks.length})</summary>
+                        ${tracksPreview(poolTracks, { withAudio: 'first', max: 12 })}
+                    </details>
                 </div>
             `;
             const rawLink = document.getElementById('tpd2-raw-link');
             if (rawLink) rawLink.href = `${sessionPath}/chat.json`;
+            hydrateMiniPlayers(metaEl);
         }
 
         function roleBubble(role) {
@@ -585,7 +643,9 @@
                     msg.className = roleBubble('music');
                     const title = document.createElement('div');
                     title.className = 'music-title';
-                    title.textContent = `${track.title || 'Unknown'} — ${track.artist || ''}`;
+                    const baseTitle = `${track.title || 'Unknown'} — ${track.artist || ''}`;
+                    const preview = getPreviewUrl(track.track_id);
+                    title.innerHTML = preview ? `${baseTitle} <span class=\"mini-audio\" data-src=\"${preview}\"></span>` : baseTitle;
                     msg.appendChild(title);
                     const txt = document.createElement('div');
                     txt.textContent = (t.recsys_turn.message || '').toString();
@@ -594,6 +654,45 @@
                     container.appendChild(wrap);
                 }
             }
+            hydrateMiniPlayers(container);
+        }
+
+        // Compact player hydration
+        function hydrateMiniPlayers(root) {
+            const ctx = root || document;
+            ctx.querySelectorAll('.mini-audio').forEach(ph => {
+                const src = ph.getAttribute('data-src');
+                if (!src) return;
+                const audio = new Audio(src);
+                audio.preload = 'none';
+                const btn = document.createElement('button');
+                btn.className = 'mini-btn';
+                btn.textContent = '▶';
+                const bar = document.createElement('div');
+                bar.className = 'mini-bar';
+                const fill = document.createElement('div');
+                fill.className = 'mini-fill';
+                bar.appendChild(fill);
+                const wrap = document.createElement('span');
+                wrap.className = 'mini-player';
+                wrap.appendChild(btn);
+                wrap.appendChild(bar);
+                let playing = false;
+                btn.addEventListener('click', () => {
+                    if (!playing) {
+                        document.querySelectorAll('.mini-player').forEach(w => { if (w !== wrap) w.dispatchEvent(new CustomEvent('mini-stop')); });
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                });
+                wrap.addEventListener('mini-stop', () => { if (!audio.paused) audio.pause(); });
+                audio.addEventListener('play', () => { playing = true; btn.textContent = '⏸'; });
+                audio.addEventListener('pause', () => { playing = false; btn.textContent = '▶'; });
+                audio.addEventListener('timeupdate', () => { const p = audio.duration ? Math.min(1, audio.currentTime / audio.duration) : 0; fill.style.width = `${p * 100}%`; });
+                audio.addEventListener('ended', () => { playing = false; btn.textContent = '▶'; fill.style.width = '0%'; });
+                ph.replaceWith(wrap);
+            });
         }
 
         // (intentionally no message normalization; render exactly as provided)
@@ -771,23 +870,26 @@
 
         // Init demo and pagination
         document.addEventListener('DOMContentLoaded', () => {
-            // pagination
-            document.querySelectorAll('.pagination .page-link').forEach(a => {
+            // build pagination dynamically
+            const pages = document.getElementById('tpd2-pages');
+            pages.innerHTML = AVAILABLE_SESSIONS.map((_, i) => `<li class=\"page-item${i===0?' active':''}\"><a class=\"page-link\" href=\"#\" data-demo=\"${i}\">${i+1}</a></li>`).join('');
+            pages.querySelectorAll('.page-link').forEach(a => {
                 a.addEventListener('click', async (e) => {
                     e.preventDefault();
                     const idx = parseInt(a.getAttribute('data-demo'), 10) || 0;
-                    document.querySelectorAll('.pagination .page-item').forEach(li => li.classList.remove('active'));
+                    pages.querySelectorAll('.page-item').forEach(li => li.classList.remove('active'));
                     a.parentElement.classList.add('active');
                     try {
+                        await loadPreviewMap();
                         await loadDemo(idx);
                     } catch (err) {
-                        document.getElementById('tpd2-chat').innerHTML = `<div class="loading">Failed to load demo.</div>`;
+                        document.getElementById('tpd2-chat').innerHTML = `<div class=\"loading\">Failed to load demo.</div>`;
                         console.error(err);
                     }
                 });
             });
 
-            loadDemo(0).catch(err => {
+            loadPreviewMap().then(() => loadDemo(0)).catch(err => {
                 document.getElementById('tpd2-chat').innerHTML = `<div class="loading">Failed to load demo.</div>`;
                 console.error(err);
             });
