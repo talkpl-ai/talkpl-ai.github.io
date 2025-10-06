@@ -474,7 +474,12 @@
         let previewMap;
         async function loadPreviewMap() {
             if (previewMap) return previewMap;
-            const res = await fetch('./preview_urls.csv');
+            // Use root-absolute path to be robust on GitHub Pages/custom domains
+            let res = await fetch('/p/talkplaydata2/preview_urls.csv').catch(() => null);
+            if (!res || !res.ok) {
+                // Fallback to relative path if running locally without the /p/ prefix
+                try { res = await fetch('./preview_urls.csv'); } catch (_) { /* noop */ }
+            }
             if (!res.ok) { previewMap = new Map(); return previewMap; }
             const text = await res.text();
             previewMap = new Map();
