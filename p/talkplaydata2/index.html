@@ -578,6 +578,8 @@
                     <div><strong>${goal.specificity || '-'}</strong> · ${specDesc}</div>
                     <div class="small text-muted" style="margin-top:6px;">Listener goal</div>
                     <div>${goal.listener_goal || '-'}</div>
+                    <div class="small text-muted" style="margin-top:6px;">Target turn count</div>
+                    <div>${goal.target_turn_count || '-'}</div>
                     <div class="small" style="margin-top:6px;">
                         <a href="${sessionPath}/conversation_goal.json" target="_blank" rel="noopener">goal JSON</a>
                                             </div>
@@ -589,6 +591,12 @@
                         <span class="badge badge-on">Shared with Listener</span>
                         <span class="badge badge-on">Shared with RecSys</span>
                     </div>
+                    <div class="small text-muted">Age group</div>
+                    <div>${profile.age_group || '-'}</div>
+                    <div class="small text-muted" style="margin-top:6px;">Country</div>
+                    <div>${profile.country || '-'}</div>
+                    <div class="small text-muted" style="margin-top:6px;">Gender</div>
+                    <div>${profile.gender || '-'}</div>
                     <div class="small text-muted">Top genre</div>
                     <div>${profile.top_1_genre || '-'}</div>
                     <div class="small text-muted" style="margin-top:6px;">Preferred culture</div>
